@@ -1,0 +1,98 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Toàn trang */
+body {
+    font-family: "Roboto", sans-serif;
+    background: #121212; /* nền đen */
+    color: #e0e0e0; /* chữ xám nhạt dễ đọc */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Tiêu đề */
+.tieude h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Khung thông tin */
+.thongtin {
+    background: #1e1e1e; /* khung tối hơn nền */
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Thông tin user */
+.user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user .img1 {
+    width: 60px;
+    height: 60px;
+    filter: brightness(0) invert(1); /* đổi icon sang trắng */
+}
+
+.ten {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Số điện thoại và email */
+.sdt, .email {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.img2, .img3 {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* icon trắng */
+}
+
+.sdt1, .email1 {
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
+/* Hiệu ứng hover */
+.sdt:hover, .email:hover, .user:hover {
+    transform: translateX(5px);
+    transition: 0.3s ease;
+    color: #00bcd4; /* đổi màu chữ khi hover */
+}
+
+/* Animation khi load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
