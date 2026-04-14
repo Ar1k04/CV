@@ -1,32 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="tieude">
-        <h1>Hi from a student </h1>
-    </div>
 
-    <div class="thongtin">
-        <div class="user">
-            <img class="img1" src="./Img/user.svg" alt="user">    
-            <h1 class="ten">Nguyễn Hoàng Bảo Long</h1>
-        </div> 
-        <div class="sdt">
-            <img class="img2" src="./Img/telephone.svg" alt="telephone">
-            <p class="sdt1">0392381619</p>
-        </div>
-        <div class="email">
-            <img class="img3" src="./Img/email.svg" alt="email">
-            <p class="email1">longbao12082004@gmail.com</p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyễn Hoàng Bảo Long | IT Intern Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Nguyễn Hoàng Bảo Long — Final-year IT student at USTH passionate about Software Development, AI, and Full-Stack Web Development. Seeking IT Internship opportunities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ── CURSOR GLOW ── -->
+  <div id="cursor-glow"></div>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-logo">Portfolio<span class="accent"></span></div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="mailto:longbao12082004@gmail.com" class="nav-cta" id="hire-btn">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <canvas id="particle-canvas"></canvas>
     </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Internship
+      </div>
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">
+        Nguyễn Hoàng<br />
+        <span class="name-gradient">Bảo Long</span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-prefix">&lt;</span>
+        <span id="typed-role">Software Engineer Intern</span>
+        <span class="role-suffix">/&gt;</span>
+      </div>
+      <p class="hero-summary">
+        Final-year IT student at <strong>USTH</strong> · Passionate about building elegant software, AI systems, and
+        seamless user experiences.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#projects" class="btn-primary" id="view-work-btn">View My Work</a>
+        <a href="#contact" class="btn-secondary" id="contact-btn">Get In Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Ar1k04" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"
+          id="github-link">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+          </svg>
+        </a>
+        <a href="mailto:longbao12082004@gmail.com" class="social-link" aria-label="Email" id="email-link">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
+        </a>
+        <a href="tel:0392381619" class="social-link" aria-label="Phone" id="phone-link">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          <div class="avatar-code">
+            <div class="code-line"><span class="cl-kw">const</span> <span class="cl-var">dev</span> <span
+                class="cl-op">=</span> <span class="cl-obj">{</span></div>
+            <div class="code-line cl-indent"><span class="cl-key">name</span><span class="cl-op">:</span> <span
+                class="cl-str">"Bảo Long"</span><span class="cl-op">,</span></div>
+            <div class="code-line cl-indent"><span class="cl-key">role</span><span class="cl-op">:</span> <span
+                class="cl-str">"IT Intern"</span><span class="cl-op">,</span></div>
+            <div class="code-line cl-indent"><span class="cl-key">gpa</span><span class="cl-op">:</span> <span
+                class="cl-num">3.8</span><span class="cl-op">,</span></div>
+            <div class="code-line cl-indent"><span class="cl-key">passion</span><span class="cl-op">:</span> <span
+                class="cl-str">"building"</span><span class="cl-op">,</span></div>
+            <div class="code-line cl-indent"><span class="cl-key">ready</span><span class="cl-op">:</span> <span
+                class="cl-bool">true</span></div>
+            <div class="code-line"><span class="cl-obj">}</span><span class="cl-op">;</span></div>
+          </div>
+        </div>
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div class="orbit-dot od-1"></div>
+        <div class="orbit-dot od-2"></div>
+        <div class="orbit-dot od-3"></div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" id="scroll-down-arrow">
+      <div class="scroll-arrow"></div>
+      <span>Scroll Down</span>
+    </a>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">01 · About Me</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">I'm a <strong>final-year Information and Communication Technology student</strong> at
+            the <strong>University of Science and Technology of Hanoi (USTH)</strong>, with a deep passion for building
+            software that actually matters.</p>
+          <p>My core strengths lie in <strong>full-stack web development</strong> and <strong>AI/ML
+              engineering</strong>. I've worked on real-world projects ranging from travel booking platforms to seismic
+            detection systems powered by deep learning.</p>
+          <p>I thrive in environments where I can be challenged, contribute meaningfully to a team, and grow rapidly.
+            I'm fluent in English (B2) and always eager to collaborate across cultures.</p>
+          <div class="about-highlights">
+            <div class="highlight-item" id="highlight-usth">
+              <div class="highlight-icon">🎓</div>
+              <div>
+                <strong>USTH</strong>
+                <span>ICT · 2022 – 2026</span>
+              </div>
+            </div>
+            <div class="highlight-item" id="highlight-location">
+              <div class="highlight-icon">📍</div>
+              <div>
+                <strong>Hà Nội, Vietnam</strong>
+                <span>Open to remote</span>
+              </div>
+            </div>
+            <div class="highlight-item" id="highlight-english">
+              <div class="highlight-icon">🌐</div>
+              <div>
+                <strong>English B2</strong>
+                <span>Vietnamese native</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card" id="stat-projects">
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-card" id="stat-languages">
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">Languages</div>
+          </div>
+          <div class="stat-card" id="stat-frameworks">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Frameworks</div>
+          </div>
+          <div class="stat-card" id="stat-databases">
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-label">Databases</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">02 · Skills</div>
+      <h2 class="section-title">My Tech Stack</h2>
+      <div class="skills-grid">
+
+        <div class="skill-category" id="skill-lang">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">💻</div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="90">HTML/CSS</span>
+            <span class="skill-tag" data-level="82">JavaScript</span>
+            <span class="skill-tag" data-level="80">Python</span>
+            <span class="skill-tag" data-level="75">Java</span>
+            <span class="skill-tag" data-level="65">C/C++</span>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skill-fw">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">⚙️</div>
+            <h3>Frameworks & Libraries</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="80">React.js</span>
+            <span class="skill-tag" data-level="75">Node.js</span>
+            <span class="skill-tag" data-level="65">FastAPI</span>
+            <span class="skill-tag" data-level="70">PyTorch</span>
+            <span class="skill-tag" data-level="72">Scikit-learn</span>
+            <span class="skill-tag" data-level="70">NumPy</span>
+            <span class="skill-tag" data-level="68">Pandas</span>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skill-db">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🗄️</div>
+            <h3>Database</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="78">PostgreSQL</span>
+            <span class="skill-tag" data-level="75">MySQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skill-tools">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🔧</div>
+            <h3>Tools & Concepts</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="82">Git</span>
+            <span class="skill-tag" data-level="75">OOP</span>
+            <span class="skill-tag" data-level="70">Anaconda</span>
+            <span class="skill-tag" data-level="72">Deep Learning</span>
+            <span class="skill-tag" data-level="68">CNN-LSTM</span>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skill-soft">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🤝</div>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Task Management</span>
+            <span class="skill-tag">Adaptability</span>
+            <span class="skill-tag">Teamwork</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">03 · Projects</div>
+      <h2 class="section-title">What I've Built</h2>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card featured" id="project-booking">
+          <div class="project-badge">Featured</div>
+          <div class="project-header">
+            <div class="project-type">Full-Stack Web App</div>
+            <div class="project-period">March 2026 – Present</div>
+          </div>
+          <h3 class="project-title">Integrated Accommodation & Tour Booking Website</h3>
+          <p class="project-desc">A full-featured travel booking platform that digitizes and simplifies the entire trip
+            planning process. Users can search, compare, and book both accommodations and tours from a unified
+            interface.</p>
+          <div class="project-role">
+            <span class="role-badge">👨‍💻 Developer</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Unified platform for accommodation + tour booking</li>
+            <li>Real-time search and comparison engine</li>
+            <li>Full REST API backend with FastAPI</li>
+            <li>PostgreSQL relational database design</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-pill react">React.js</span>
+            <span class="tech-pill node">Node.js</span>
+            <span class="tech-pill py">FastAPI</span>
+            <span class="tech-pill db">PostgreSQL</span>
+            <span class="tech-pill html">HTML/CSS</span>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" id="project-seismic">
+          <div class="project-header">
+            <div class="project-type">AI / Deep Learning</div>
+            <div class="project-period">Sep 2025 – Mar 2026</div>
+          </div>
+          <h3 class="project-title">Seismic Classification Using Distributed Acoustic Sensing</h3>
+          <p class="project-desc">A real-time earthquake detection system that analyzes fiber optic (DAS) signals using
+            a hybrid deep learning model. Features a live monitoring dashboard to visualize seismic events.</p>
+          <div class="project-role">
+            <span class="role-badge">🤖 AI Developer</span>
+            <span class="role-badge">🎨 Front-end Developer</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Hybrid CNN-LSTM model for time-series seismic data</li>
+            <li>Real-time DAS fiber optic signal processing</li>
+            <li>Live monitoring dashboard with visualizations</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-pill py">Python</span>
+            <span class="tech-pill ai">PyTorch</span>
+            <span class="tech-pill ai">CNN-LSTM</span>
+            <span class="tech-pill data">NumPy/Pandas</span>
+            <span class="tech-pill html">HTML/CSS/JS</span>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card" id="project-mnist">
+          <div class="project-header">
+            <div class="project-type">Machine Learning</div>
+            <div class="project-period">Apr 2025 – May 2025</div>
+          </div>
+          <h3 class="project-title">MNIST Digit Classification with Logistic Regression</h3>
+          <p class="project-desc">Implemented a machine learning pipeline to classify handwritten digits from the MNIST
+            dataset using Logistic Regression. Includes data preprocessing, model training, evaluation, and
+            visualization.</p>
+          <div class="project-role">
+            <span class="role-badge">👨‍💻 Developer</span>
+          </div>
+          <ul class="project-highlights">
+            <li>End-to-end ML pipeline from data prep to evaluation</li>
+            <li>Logistic Regression on 70,000+ MNIST samples</li>
+            <li>Performance visualization with Matplotlib</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-pill py">Python</span>
+            <span class="tech-pill ai">Scikit-learn</span>
+            <span class="tech-pill data">NumPy</span>
+            <span class="tech-pill data">Matplotlib</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EDUCATION ── -->
+  <section id="education">
+    <div class="container">
+      <div class="section-label">04 · Education</div>
+      <h2 class="section-title">Academic Background</h2>
+      <div class="edu-card" id="edu-usth">
+        <div class="edu-logo">
+          <div class="edu-logo-inner">USTH</div>
+        </div>
+        <div class="edu-info">
+          <h3>University of Science and Technology of Hanoi</h3>
+          <div class="edu-degree">Bachelor in Information and Communication Technology</div>
+          <div class="edu-duration">2022 – 2026 · Hà Nội, Vietnam</div>
+          <div class="edu-tags">
+            <span>Algorithms & Data Structures</span>
+            <span>OOP</span>
+            <span>Machine Learning</span>
+            <span>Database Systems</span>
+            <span>Web Development</span>
+          </div>
+        </div>
+        <div class="edu-badge-wrap">
+          <div class="edu-year-badge">4th Year</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">05 · Contact</div>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="contact-lead">I'm actively looking for <strong>IT Internship</strong> opportunities. If you think we'd
+        be a great fit, feel free to reach out — I'd love to chat!</p>
+      <div class="contact-grid">
+        <a href="mailto:longbao12082004@gmail.com" class="contact-card" id="contact-email">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">longbao12082004@gmail.com</span>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <a href="https://github.com/Ar1k04" target="_blank" rel="noopener" class="contact-card" id="contact-github">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/Ar1k04</span>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <a href="tel:0392381619" class="contact-card" id="contact-phone">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">0392 381 619</span>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <div class="contact-card static" id="contact-location">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-label">Location</span>
+            <span class="contact-value">Đội Cấn, Ngọc Hà, Hà Nội</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Portfolio<span class="accent"></span></div>
+        <p class="footer-copy">Designed & Built by <strong>Nguyễn Hoàng Bảo Long</strong> · 2026</p>
+        <div class="footer-socials">
+          <a href="https://github.com/Ar1k04" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+          </a>
+          <a href="mailto:longbao12082004@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
